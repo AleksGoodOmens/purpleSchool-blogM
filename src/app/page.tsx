@@ -2,6 +2,8 @@ import Image from 'next/image'
 import styles from './page.module.css'
 
 export default function Home() {
+	const a = (b) => console.log(b)
+	console.log(a)
 	return (
 		<div className={styles.page}>
 			<main className={styles.main}>
