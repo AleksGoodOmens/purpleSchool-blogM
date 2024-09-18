@@ -1,9 +1,11 @@
 import Image from 'next/image'
-import styles from './page.module.css'
+
+import styles from './page.module.scss'
 
 export default function Home() {
 	const a = (b) => console.log(b)
-	console.log(a)
+	console.log(a, 'check')
+
 	return (
 		<div className={styles.page}>
 			<main className={styles.main}>
