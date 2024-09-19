@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import { JetBrains_Mono } from 'next/font/google'
+import { Open_Sans } from 'next/font/google'
 import './globals.css'
 
-const JetBrains = JetBrains_Mono({ subsets: ['cyrillic', 'latin'] })
+const OpenSans = Open_Sans({ subsets: ['cyrillic', 'latin'] })
 
 export const metadata: Metadata = {
 	title: 'Блог - AmensGood',
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>): JSX.Element {
 	return (
 		<html lang="ru">
-			<body className={JetBrains.className}>{children}</body>
+			<body className={OpenSans.className}>{children}</body>
 		</html>
 	)
 }

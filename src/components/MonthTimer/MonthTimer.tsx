@@ -8,8 +8,7 @@ import type { MonthTimerProps } from './MonthTimer.props'
 function MonthTimer({ value, className, children }: MonthTimerProps) {
 	return (
 		<div className={cn(styles['wrapper'], className)}>
-			{children}
-			{properMonthEnding(value)}
+			{children} - {properMonthEnding(value)}
 		</div>
 	)
 }

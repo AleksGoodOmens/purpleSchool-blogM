@@ -18,7 +18,7 @@ function SingleCard({
 }: SingleCardProps) {
 	return (
 		<article className={styles['article']}>
-			<section>
+			<section className={styles['image']}>
 				<Image
 					width={300}
 					height={300}
@@ -26,14 +26,14 @@ function SingleCard({
 					src={img.src}
 				/>
 			</section>
-			<section>
-				<div>
+			<section className={styles['body']}>
+				<div className={styles['body__header']}>
 					<MonthTimer value={duration}>{course}</MonthTimer>
 					<Like>{rating}</Like>
 				</div>
 				<Heading tag="h3">{heading}</Heading>
-				<Paragraph appearance="m">{paragraph}</Paragraph>
-				<div>
+				<Paragraph appearance="s">{paragraph}</Paragraph>
+				<div className={styles['body__footer']}>
 					<MinuteTimer value={time} />
 					<CustomLink
 						href={link.src}

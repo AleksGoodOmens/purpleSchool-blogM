@@ -81,74 +81,89 @@ const singleCardsExample = [
 
 function TypographyPage() {
 	return (
-		<div>
-			<div style={{ display: 'flex', gap: '1rem' }}>
-				{minuteTimerExample.map((item) => (
-					<MinuteTimer
-						key={item}
-						value={item}
-					/>
-				))}
-			</div>
-			<div style={{ display: 'flex', gap: '1rem' }}>
-				{monthTimerExample.map((item) => (
-					<MonthTimer
-						key={item}
-						value={item}
-					/>
-				))}
-			</div>
-			<div style={{ display: 'flex', gap: '1rem' }}>
-				{headingsExample.map((item) => (
-					<Heading
-						key={item.tag}
-						tag={item.tag}>
-						{item.text}
-					</Heading>
-				))}
-			</div>
-			<div>
-				{paragraphsExample.map((item) => (
-					<Paragraph
-						key={item.appearance}
-						appearance={item.appearance}>
-						{item.text}
-					</Paragraph>
-				))}
-			</div>
-			<div>
-				{linksExample.map((item) => (
-					<CustomLink
-						key={item.type}
-						href={item.href}
-						type={item.type}>
-						{item.text}
-					</CustomLink>
-				))}
-			</div>
-			<div>
-				{LikesExample.map((item) => (
-					<Like
-						key={item.appearance}
-						appearance={item.appearance}>
-						{item.value}
-					</Like>
-				))}
-			</div>
-			<div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem' }}>
-				{singleCardsExample.map((item) => (
-					<SingleCard
-						key={item.course}
-						course={item.course}
-						duration={item.duration}
-						heading={item.heading}
-						img={item.img}
-						link={item.link}
-						paragraph={item.paragraph}
-						rating={item.rating}
-						time={item.time}
-					/>
-				))}
+		<div className="container">
+			<header>
+				<Heading tag="h1">Typography page</Heading>
+				<CustomLink
+					type="arrow"
+					href="/">
+					go to home Page
+				</CustomLink>
+			</header>
+			<div style={{ display: 'grid', gap: '2rem' }}>
+				<div style={{ display: 'flex', gap: '1rem', padding: '3rem 0 0 0', flexWrap: 'wrap' }}>
+					{minuteTimerExample.map((item) => (
+						<MinuteTimer
+							key={item}
+							value={item}
+						/>
+					))}
+				</div>
+				<div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+					{monthTimerExample.map((item) => (
+						<MonthTimer
+							key={item}
+							value={item}
+						/>
+					))}
+				</div>
+				<div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+					{headingsExample.map((item) => (
+						<Heading
+							key={item.tag}
+							tag={item.tag}>
+							{item.text}
+						</Heading>
+					))}
+				</div>
+				<div>
+					{paragraphsExample.map((item) => (
+						<Paragraph
+							key={item.appearance}
+							appearance={item.appearance}>
+							{item.text}
+						</Paragraph>
+					))}
+				</div>
+				<div>
+					{linksExample.map((item) => (
+						<CustomLink
+							key={item.type}
+							href={item.href}
+							type={item.type}>
+							{item.text}
+						</CustomLink>
+					))}
+				</div>
+				<div>
+					{LikesExample.map((item) => (
+						<Like
+							key={item.appearance}
+							appearance={item.appearance}>
+							{item.value}
+						</Like>
+					))}
+				</div>
+				<div
+					style={{
+						display: 'grid',
+						gridTemplateColumns: 'repeat( auto-fit, minmax(250px, 1fr) )',
+						gap: '2rem',
+					}}>
+					{singleCardsExample.map((item) => (
+						<SingleCard
+							key={item.course}
+							course={item.course}
+							duration={item.duration}
+							heading={item.heading}
+							img={item.img}
+							link={item.link}
+							paragraph={item.paragraph}
+							rating={item.rating}
+							time={item.time}
+						/>
+					))}
+				</div>
 			</div>
 		</div>
 	)
