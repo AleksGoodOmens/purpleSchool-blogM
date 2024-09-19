@@ -5,7 +5,7 @@ import ArrowIcon from './arrow.svg'
 import styles from './CustomLink.module.scss'
 import type { CustomLinkProps } from './CustomLink.props'
 
-function CustomLink({ className, children, href, type = 'none', ...props }: CustomLinkProps) {
+function CustomLink({ className, children, href, type = 'basic', ...props }: CustomLinkProps) {
 	return (
 		<Link
 			href={href}
