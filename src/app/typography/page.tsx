@@ -1,4 +1,4 @@
-import { MinuteTimer, MonthTimer } from '@/components'
+import { CustomLink, Heading, Like, MinuteTimer, MonthTimer, Paragraph } from '@/components'
 
 function TypographyPage() {
 	return (
@@ -20,6 +20,34 @@ function TypographyPage() {
 				<MonthTimer value={5} />
 				<MonthTimer value={6} />
 				<MonthTimer value={10} />
+			</div>
+			<div style={{ display: 'flex', gap: '1rem' }}>
+				<Heading tag="h1">large title</Heading>
+				<Heading tag="h2">medium title</Heading>
+				<Heading tag="h3">small title</Heading>
+			</div>
+			<div>
+				<Paragraph appearance="s">
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, dignissimos.
+				</Paragraph>
+				<Paragraph appearance="m">
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, dignissimos.
+				</Paragraph>
+				<Paragraph appearance="l">
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, dignissimos.
+				</Paragraph>
+			</div>
+			<div>
+				<CustomLink href="test">link element</CustomLink>
+				<CustomLink
+					href="test"
+					type="arrow">
+					link element with arrow
+				</CustomLink>
+			</div>
+			<div>
+				<Like>5</Like>
+				<Like appearance={'circle'}>Понравилось? Жми</Like>
 			</div>
 		</div>
 	)

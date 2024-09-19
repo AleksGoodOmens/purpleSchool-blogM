@@ -1,0 +1,16 @@
+.link {
+	display: flex;
+	align-items: center;
+	transition: all 0.3s;
+	color: var(--primary-200);
+	font-size: var(--fz-s);
+	text-decoration: none;
+	&:hover,
+	&:active {
+		font-weight: 700;
+	}
+	&.accent {
+		color: var(--secondary);
+		stroke: var(--secondary);
+	}
+}
