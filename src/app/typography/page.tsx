@@ -1,3 +1,5 @@
+'use client'
+import { updateLike } from '@/api'
 import { CustomLink, Heading, Like, MinuteTimer, MonthTimer, Paragraph } from '@/components'
 import { SingleCard } from '@/ui'
 
@@ -69,11 +71,14 @@ function TypographyPage() {
 				</div>
 				<div>
 					{LikesExample.map((item) => (
-						<Like
-							key={item.appearance}
-							appearance={item.appearance}>
-							{item.value}
-						</Like>
+						<div key={item.appearance}>
+							<Like
+								id={item.id}
+								changer={updateLike}
+								appearance={item.appearance}>
+								{item.value}
+							</Like>
+						</div>
 					))}
 				</div>
 				<div

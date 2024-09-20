@@ -29,8 +29,8 @@ export const linksExample = [
 ]
 
 export const LikesExample = [
-	{ appearance: 'circle' as const, value: 'Понравилось? Жми' },
-	{ appearance: 'none' as const, value: 5 },
+	{ appearance: 'circle' as const, value: 'Понравилось? Жми', id: '1' },
+	{ appearance: 'none' as const, value: 5, id: '2' },
 ]
 
 export const singleCardsExample = [

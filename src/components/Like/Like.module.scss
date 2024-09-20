@@ -1,6 +1,4 @@
 .btn {
-	display: flex;
-	align-items: center;
 	transition: all 0.3s;
 	border: none;
 	background-color: transparent;
@@ -16,24 +14,31 @@
 		stroke: var(--secondary);
 		fill: var(--secondary);
 		border-color: var(--secondary);
-		& .circle {
-			border-color: var(--secondary);
-		}
-	}
-
-	&.active {
-		color: var(--secondary);
-		stroke: var(--secondary);
-		fill: var(--secondary);
-		border-color: var(--secondary);
 	}
 }
+
 .circle {
-	display: grid;
-	place-content: center;
-	place-items: center;
 	margin-left: 1rem;
 	border: 1px solid var(--primary-200);
 	border-radius: 50%;
 	padding: 1rem;
+	aspect-ratio: 1/1;
+}
+.active {
+	color: var(--secondary);
+	stroke: var(--secondary);
+	fill: var(--secondary);
+
+	&.circle {
+		border-color: var(--secondary);
+		background-color: var(--secondary);
+		fill: var(--primary-100);
+		&:hover,
+		&:active {
+			color: var(--secondary);
+			stroke: var(--secondary);
+			fill: var(--primary-100);
+			border-color: var(--secondary);
+		}
+	}
 }
