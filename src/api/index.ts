@@ -1,4 +1,4 @@
-export const updateLike = async (id: string, rating: number) => {
+export const updateLike = async (id: number, rating: number) => {
 	fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
 		method: 'PATCH',
 		body: JSON.stringify({

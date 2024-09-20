@@ -121,26 +121,6 @@ function TypographyPage() {
 						/>
 					))}
 				</div>
-				<div
-					style={{
-						display: 'grid',
-						gridTemplateColumns: 'repeat( auto-fit, minmax(250px, 1fr) )',
-						gap: '2rem',
-					}}>
-					{singleCardsExample.map((item) => (
-						<SingleCard
-							key={item.course}
-							course={item.course}
-							duration={item.duration}
-							heading={item.heading}
-							img={item.img}
-							link={item.link}
-							paragraph={item.paragraph}
-							rating={item.rating}
-							time={item.time}
-						/>
-					))}
-				</div>
 			</div>
 		</div>
 	)

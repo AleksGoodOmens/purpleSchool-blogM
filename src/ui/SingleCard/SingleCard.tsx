@@ -1,5 +1,8 @@
+'use client'
+
 import Image from 'next/image'
 
+import { updateLike } from '@/api'
 import { CustomLink, Heading, Like, MinuteTimer, MonthTimer, Paragraph } from '@/components'
 
 import pic from './pic.jpg'
@@ -12,6 +15,7 @@ function SingleCard({
 	heading,
 	link,
 	paragraph,
+	itemId,
 	rating,
 	img = { alt: 'no image', src: pic },
 	time,
@@ -29,7 +33,13 @@ function SingleCard({
 			<section className={styles['body']}>
 				<div className={styles['body__header']}>
 					<MonthTimer value={duration}>{course}</MonthTimer>
-					<Like>{rating}</Like>
+					<div>
+						<Like
+							itemId={itemId}
+							changer={updateLike}>
+							{rating}
+						</Like>
+					</div>
 				</div>
 				<Heading tag="h3">{heading}</Heading>
 				<Paragraph appearance="s">{paragraph}</Paragraph>

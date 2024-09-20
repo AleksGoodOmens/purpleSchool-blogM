@@ -1,4 +1,4 @@
-import pic from '../../ui/SingleCard/pic.jpg'
+import pic from '../../../ui/SingleCard/pic.jpg'
 
 export const minuteTimerExample = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 export const monthTimerExample = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
@@ -35,6 +35,7 @@ export const LikesExample = [
 
 export const singleCardsExample = [
 	{
+		id: 1,
 		course: 'Front-end',
 		duration: 1,
 		heading: 'Как работать с CSS Grid',
@@ -49,6 +50,7 @@ export const singleCardsExample = [
 		time: 3,
 	},
 	{
+		id: 2,
 		course: 'Back-end',
 		duration: 5,
 		heading: 'Как работать с NextJS',
@@ -62,6 +64,7 @@ export const singleCardsExample = [
 		time: 11,
 	},
 	{
+		id: 3,
 		course: 'design',
 		duration: 1,
 		heading: 'Как работать с Figma',

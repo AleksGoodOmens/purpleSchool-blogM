@@ -1,6 +1,7 @@
 import type { StaticImageData } from 'next/image'
 
 export interface SingleCardProps {
+	itemId: number
 	img: {
 		src: string | StaticImageData
 		alt: string

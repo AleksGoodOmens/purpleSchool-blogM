@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import { CustomLink } from '@/components'
 
 import GitHubIcon from './github-icon.svg'
-import styles from './page.module.scss'
+import styles from './header.module.scss'
 
 function Header() {
 	const [isSticky, setIsSticky] = useState(false)
