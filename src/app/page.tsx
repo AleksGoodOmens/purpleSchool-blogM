@@ -2,6 +2,7 @@ import cn from 'classnames'
 
 import { CustomLink, Heading } from '@/components'
 
+import { Cards } from './components/Cards/Cards'
 import styles from './page.module.scss'
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
 				href={'/typography'}>
 				to Typography page
 			</CustomLink>
+			<Cards />
 		</div>
 	)
 }

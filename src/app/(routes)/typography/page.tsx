@@ -1,3 +1,5 @@
+'use client'
+import { updateLike } from '@/api'
 import { CustomLink, Heading, Like, MinuteTimer, MonthTimer, Paragraph } from '@/components'
 import { SingleCard } from '@/ui'
 
@@ -14,14 +16,14 @@ import {
 function TypographyPage() {
 	return (
 		<div className="container">
-			<header>
+			<nav>
 				<Heading tag="h1">Typography page</Heading>
 				<CustomLink
 					type="arrow"
 					href="/">
 					go to home Page
 				</CustomLink>
-			</header>
+			</nav>
 			<div style={{ display: 'grid', gap: '2rem' }}>
 				<div style={{ display: 'flex', gap: '1rem', padding: '3rem 0 0 0', flexWrap: 'wrap' }}>
 					{minuteTimerExample.map((item) => (
@@ -69,11 +71,34 @@ function TypographyPage() {
 				</div>
 				<div>
 					{LikesExample.map((item) => (
-						<Like
-							key={item.appearance}
-							appearance={item.appearance}>
-							{item.value}
-						</Like>
+						<div key={item.appearance}>
+							<Like
+								id={item.id}
+								changer={updateLike}
+								appearance={item.appearance}>
+								{item.value}
+							</Like>
+						</div>
+					))}
+				</div>
+				<div
+					style={{
+						display: 'grid',
+						gridTemplateColumns: 'repeat( auto-fit, minmax(250px, 1fr) )',
+						gap: '2rem',
+					}}>
+					{singleCardsExample.map((item) => (
+						<SingleCard
+							key={item.course}
+							course={item.course}
+							duration={item.duration}
+							heading={item.heading}
+							img={item.img}
+							link={item.link}
+							paragraph={item.paragraph}
+							rating={item.rating}
+							time={item.time}
+						/>
 					))}
 				</div>
 				<div
