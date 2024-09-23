@@ -14,7 +14,7 @@ export const updateLike = async (id: number, rating: number) => {
 		// eslint-disable-next-line no-console
 		.then((json) => console.log(json))
 }
-export async function getData<T>(path: string): Promise<T> {
+export const getData = async <T>(path: string): Promise<T> => {
 	const resp = await fetch(path)
 
 	if (!resp) {
