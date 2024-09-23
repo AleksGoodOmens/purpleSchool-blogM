@@ -9,8 +9,8 @@ import LikeIcon from './like.svg'
 function Like({ className, itemId, changer, children, appearance = 'none', ...props }: likeProps) {
 	const [active, setActive] = useState(false)
 
-	const handlerClick = () => {
-		setActive(!active)
+	const handleClick = () => {
+		setActive((prev) => !prev)
 		changer(itemId, 1)
 	}
 	return (
@@ -18,7 +18,7 @@ function Like({ className, itemId, changer, children, appearance = 'none', ...pr
 			<span className={styles['children']}>{children}</span>
 			<button
 				{...props}
-				onClick={handlerClick}
+				onClick={handleClick}
 				className={cn(styles['btn'], className, {
 					[styles['active']]: active,
 					[styles['circle']]: appearance === 'circle',
