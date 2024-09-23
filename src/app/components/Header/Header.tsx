@@ -1,29 +1,15 @@
 'use client'
 import cn from 'classnames'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
 
 import { CustomLink } from '@/components'
+import { useStickyHeader } from '@/utils/hooks/useStickyHeader'
 
 import GitHubIcon from './github-icon.svg'
 import styles from './header.module.scss'
 
 function Header() {
-	const [isSticky, setIsSticky] = useState(false)
-
-	const scrollHeader = () => {
-		if (window.scrollY >= 20) {
-			setIsSticky(true)
-		} else setIsSticky(false)
-	}
-
-	useEffect(() => {
-		window.addEventListener('scroll', scrollHeader)
-		return () => {
-			window.removeEventListener('scroll', scrollHeader)
-		}
-	}, [])
-
+	const isSticky = useStickyHeader()
 	return (
 		<header
 			className={cn(styles['header'], {
