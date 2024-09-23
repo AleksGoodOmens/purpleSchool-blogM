@@ -14,6 +14,11 @@ export default function Home() {
 				href={'/typography'}>
 				to Typography page
 			</CustomLink>
+			<CustomLink
+				type="arrow"
+				href={'/posts'}>
+				to posts page
+			</CustomLink>
 			<Cards />
 		</div>
 	)
