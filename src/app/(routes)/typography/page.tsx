@@ -73,6 +73,7 @@ function TypographyPage() {
 					{LikesExample.map((item) => (
 						<div key={item.appearance}>
 							<Like
+								itemId={+item.id}
 								id={item.id}
 								changer={updateLike}
 								appearance={item.appearance}>
@@ -89,6 +90,7 @@ function TypographyPage() {
 					}}>
 					{singleCardsExample.map((item) => (
 						<SingleCard
+							itemId={+item.id}
 							key={item.course}
 							course={item.course}
 							duration={item.duration}
@@ -109,6 +111,7 @@ function TypographyPage() {
 					}}>
 					{singleCardsExample.map((item) => (
 						<SingleCard
+							itemId={+item.id}
 							key={item.course}
 							course={item.course}
 							duration={item.duration}
