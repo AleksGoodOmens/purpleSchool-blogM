@@ -2,15 +2,15 @@
 	display: flex;
 	align-items: center;
 	transition: all 0.3s;
-	color: var(--primary-200);
+	color: var(--accent);
 	font-size: var(--fz-s);
 	text-decoration: none;
+
 	&:hover,
 	&:active {
-		font-weight: 700;
+		text-shadow: var(--accent) 0px 0px 5px;
 	}
 	&.accent {
-		color: var(--secondary);
-		stroke: var(--secondary);
+		stroke: var(--accent);
 	}
 }

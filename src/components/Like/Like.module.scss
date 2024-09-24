@@ -2,17 +2,17 @@
 	transition: all 0.3s;
 	border: none;
 	background-color: transparent;
-	color: var(--primary-200);
-	stroke: var(--primary-200);
+	color: var(--primary-400);
+	stroke: var(--primary-400);
 	fill: var(--background);
 	cursor: pointer;
 
 	&:hover,
 	&:active {
-		color: var(--secondary);
-		stroke: var(--secondary);
-		fill: var(--secondary);
-		border-color: var(--secondary);
+		color: var(--accent);
+		stroke: var(--accent);
+		fill: var(--accent);
+		border-color: var(--accent);
 	}
 }
 .children {
@@ -21,26 +21,26 @@
 
 .circle {
 	margin-left: 1rem;
-	border: 1px solid var(--primary-200);
+	border: 1px solid var(--primary-400);
 	border-radius: 50%;
 	padding: 1rem;
 	aspect-ratio: 1/1;
 }
 .active {
-	color: var(--secondary);
-	stroke: var(--secondary);
-	fill: var(--secondary);
+	color: var(--accent);
+	stroke: var(--accent);
+	fill: var(--accent);
 
 	&.circle {
-		border-color: var(--secondary);
-		background-color: var(--secondary);
-		fill: var(--primary-100);
+		border-color: var(--accent);
+		background-color: var(--accent);
+		fill: var(--primary-400);
 		&:hover,
 		&:active {
-			color: var(--secondary);
-			stroke: var(--secondary);
-			fill: var(--primary-100);
-			border-color: var(--secondary);
+			color: var(--accent);
+			stroke: var(--accent);
+			fill: var(--primary-400);
+			border-color: var(--accent);
 		}
 	}
 }
