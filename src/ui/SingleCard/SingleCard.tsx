@@ -27,7 +27,7 @@ function SingleCard({
 					width={300}
 					height={300}
 					alt={img.alt}
-					src={img.src}
+					src={pic}
 				/>
 			</section>
 			<section className={styles['body']}>

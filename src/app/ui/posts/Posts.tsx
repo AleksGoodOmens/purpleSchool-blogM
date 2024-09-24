@@ -4,34 +4,34 @@ import { SingleCard } from '@/ui'
 
 import styles from './styles.module.scss'
 
-interface IPost {
+export interface IPost {
 	userId: number
-	Id: number
+	id: number
 	title: string
 	body: string
 }
 
-async function PostsPage() {
+async function Posts() {
 	const posts = await getData<IPost[]>(API.posts)
 
 	return (
 		<div className={styles['content']}>
 			{posts.map((post) => (
 				<SingleCard
-					key={post.Id + post.userId + post.title}
-					itemId={post.Id}
+					key={post.id + post.userId + post.title}
+					itemId={post.id}
 					course="test"
-					duration={post.Id}
+					duration={post.id}
 					heading={post.title}
-					img={{ alt: post.title, src: '' }}
+					img={{ alt: post.title }}
 					paragraph={post.body}
 					rating={post.userId}
 					time={post.userId}
-					link={{ src: post.title, text: post.title }}
+					link={{ src: `/${post.id}`, text: 'Читать' }}
 				/>
 			))}
 		</div>
 	)
 }
 
-export default PostsPage
+export default Posts
