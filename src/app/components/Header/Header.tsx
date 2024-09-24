@@ -4,15 +4,16 @@ import Link from 'next/link'
 import { useContext } from 'react'
 
 import { CustomButton, CustomLink } from '@/components'
+import { GitHubContext } from '@/contexts'
 import { AppThemeContext } from '@/contexts/AppThemeContext'
 import { useStickyHeader } from '@/utils/hooks/useStickyHeader'
 
-import GitHubIcon from './github-icon.svg'
 import styles from './header.module.scss'
 
 function Header() {
 	const isSticky = useStickyHeader()
 	const { scheme, changeScheme } = useContext(AppThemeContext)
+	const { gitIcon, path } = useContext(GitHubContext)
 	return (
 		<header
 			className={cn(styles['header'], {
@@ -28,9 +29,9 @@ function Header() {
 				<CustomButton onClick={changeScheme}>{scheme}</CustomButton>
 				<CustomLink
 					target="blank"
-					href="https://github.com/AleksGoodOmens"
+					href={path as string}
 					type="basic">
-					<GitHubIcon />
+					{gitIcon && gitIcon()}
 				</CustomLink>
 			</div>
 		</header>

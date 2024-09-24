@@ -2,7 +2,7 @@ import cn from 'classnames'
 import type { Metadata } from 'next'
 import { Open_Sans } from 'next/font/google'
 
-import { AppThemeProvider } from '@/contexts/AppThemeContext'
+import { AppThemeProvider, GitHubProvider } from '@/contexts'
 
 import { Header } from './components/Header/Header'
 import styles from './page.module.scss'
@@ -25,7 +25,9 @@ export default function RootLayout({
 		<html lang="ru">
 			<body className={cn(OpenSans.className)}>
 				<AppThemeProvider className={styles.grid}>
-					<Header />
+					<GitHubProvider>
+						<Header />
+					</GitHubProvider>
 					<main className={cn('headerInsurance', styles.main)}>{children}</main>
 				</AppThemeProvider>
 			</body>
