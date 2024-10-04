@@ -4,7 +4,7 @@ import { SingleCard } from '@/ui'
 
 import styles from './styles.module.scss'
 
-interface IPost {
+export interface IPost {
 	userId: number
 	Id: number
 	title: string
