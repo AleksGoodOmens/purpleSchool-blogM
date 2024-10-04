@@ -1,7 +1,6 @@
 import { getData } from '@/api'
 import { API } from '@/api/api'
-
-import type { IPost } from '../posts/page'
+import type { IPost } from '@/app/ui/posts/Posts'
 
 export async function generateStaticParams() {
 	const posts = await getData<{ id: string }[]>(API.posts)

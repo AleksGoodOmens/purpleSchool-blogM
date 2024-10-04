@@ -2,8 +2,8 @@ import cn from 'classnames'
 
 import { CustomLink, Heading } from '@/components'
 
-import { Cards } from './components/Cards/Cards'
 import styles from './page.module.scss'
+import Posts from './ui/posts/Posts'
 
 export default function Home() {
 	return (
@@ -14,12 +14,7 @@ export default function Home() {
 				href={'/typography'}>
 				to Typography page
 			</CustomLink>
-			<CustomLink
-				type="arrow"
-				href={'/posts'}>
-				to posts page
-			</CustomLink>
-			<Cards />
+			<Posts />
 		</div>
 	)
 }
