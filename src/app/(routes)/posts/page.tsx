@@ -1,15 +1,10 @@
 import { getData } from '@/api'
 import { API } from '@/api/api'
+import type { IPost } from '@/interfaces'
 import { SingleCard } from '@/ui'
 
 import styles from './styles.module.scss'
 
-export interface IPost {
-	userId: number
-	Id: number
-	title: string
-	body: string
-}
 async function PostsPage() {
 	const posts = await getData<IPost[]>(API.posts)
 
@@ -17,10 +12,10 @@ async function PostsPage() {
 		<div className={styles['content']}>
 			{posts.map((post) => (
 				<SingleCard
-					key={post.Id + post.userId + post.title}
-					itemId={post.Id}
+					key={post.id + post.userId + post.title}
+					itemId={post.id}
 					course="test"
-					duration={post.Id}
+					duration={post.id}
 					heading={post.title}
 					img={{ alt: post.title, src: '' }}
 					paragraph={post.body}

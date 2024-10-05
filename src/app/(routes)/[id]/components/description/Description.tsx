@@ -19,12 +19,14 @@ function Description({ title, children }: DescriptionProps) {
 				aspernatur deleniti veniam magnam voluptate blanditiis quia autem, numquam laborum? Ad placeat quis quidem
 				dolore error!
 			</Paragraph>
-			<Like
-				itemId={1}
-				appearance="circle"
-				changer={updateLike}>
-				Понравилось? Жми
-			</Like>
+			<div className={styles['like']}>
+				<Like
+					itemId={1}
+					appearance="circle"
+					changer={updateLike}>
+					<span>Понравилось? Жми</span>
+				</Like>
+			</div>
 		</div>
 	)
 }
