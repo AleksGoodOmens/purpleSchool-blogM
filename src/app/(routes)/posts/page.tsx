@@ -10,7 +10,6 @@ export interface IPost {
 	title: string
 	body: string
 }
-
 async function PostsPage() {
 	const posts = await getData<IPost[]>(API.posts)
 

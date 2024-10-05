@@ -6,11 +6,16 @@
 }
 
 .h1 {
+	margin-bottom: 30px;
 	font-size: var(--fz-h-l);
+	text-transform: capitalize;
 }
 .h2 {
+	margin-bottom: 20px;
 	font-size: var(--fz-h-m);
+	text-transform: capitalize;
 }
 .h3 {
 	font-size: var(--fz-h-s);
+	text-transform: capitalize;
 }

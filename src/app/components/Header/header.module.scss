@@ -3,6 +3,7 @@
 	top: 0;
 	left: 0;
 	transition: all 0.5s;
+	box-shadow: 0 -3px 3px 3px var(--accent);
 	width: 100%;
 	&__content {
 		display: flex;

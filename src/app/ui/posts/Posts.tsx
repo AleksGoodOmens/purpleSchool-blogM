@@ -1,15 +1,9 @@
 import { getData } from '@/api'
 import { API } from '@/api/api'
+import type { IPost } from '@/interfaces'
 import { SingleCard } from '@/ui'
 
 import styles from './styles.module.scss'
-
-export interface IPost {
-	userId: number
-	id: number
-	title: string
-	body: string
-}
 
 async function Posts() {
 	const posts = await getData<IPost[]>(API.posts)
