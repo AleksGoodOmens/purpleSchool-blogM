@@ -9,4 +9,7 @@
 	&:focus {
 		color: var(--accent);
 	}
+	&::placeholder {
+		color: var(--primary-400);
+	}
 }

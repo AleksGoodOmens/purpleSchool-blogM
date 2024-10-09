@@ -6,6 +6,9 @@
 	font-weight: 400;
 	font-size: 15px;
 	line-height: 140%;
+	&::placeholder {
+		color: var(--primary-400);
+	}
 	&:focus {
 		color: var(--accent);
 	}
