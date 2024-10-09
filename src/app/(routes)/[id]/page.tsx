@@ -5,6 +5,7 @@ import type { IPost, CommentModel } from '@/interfaces'
 
 import { Comments } from './components/comments/Comments'
 import { Description } from './components/description/Description'
+import { Form } from './components/form/Form'
 import { Stats } from './components/stats/Stats'
 
 export async function generateStaticParams() {
@@ -31,6 +32,7 @@ async function DetailsPage({ params }: { params: { id: string } }) {
 			/>
 			<Description title={posts.title}>{posts.body}</Description>
 			{comments && <Comments comments={comments} />}
+			<Form />
 		</div>
 	)
 }
