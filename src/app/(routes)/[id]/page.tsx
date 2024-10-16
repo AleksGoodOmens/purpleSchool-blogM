@@ -20,7 +20,7 @@ async function DetailsPage({ params }: { params: { id: string } }) {
 	const comments = await getData<CommentModel[]>(API.comments + `?postId=${posts.id}`)
 
 	return (
-		<div>
+		<>
 			<Heading tag="h1">{posts.title}</Heading>
 			<Stats
 				month={posts.id}
@@ -33,7 +33,7 @@ async function DetailsPage({ params }: { params: { id: string } }) {
 			<Description title={posts.title}>{posts.body}</Description>
 			{comments && <Comments comments={comments} />}
 			<Form />
-		</div>
+		</>
 	)
 }
 

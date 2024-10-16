@@ -26,7 +26,11 @@ function Header() {
 					Blog by <br />
 					AmensGood
 				</Link>
-				<CustomButton onClick={changeScheme}>{scheme}</CustomButton>
+				<CustomButton
+					className={styles['button']}
+					onClick={changeScheme}>
+					{scheme}
+				</CustomButton>
 				<CustomLink
 					target="blank"
 					href={path as string}
