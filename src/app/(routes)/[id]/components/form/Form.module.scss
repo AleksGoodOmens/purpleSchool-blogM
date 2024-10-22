@@ -9,3 +9,20 @@
 		margin-left: 1rem;
 	}
 }
+
+.panel {
+	display: grid;
+	place-items: center;
+	gap: 1rem;
+	border-radius: 8px;
+	background-color: var(--success);
+	padding: 2rem;
+	text-align: center;
+	&__success {
+		color: black;
+	}
+	&__btn {
+		align-self: center;
+		max-width: fit-content;
+	}
+}
