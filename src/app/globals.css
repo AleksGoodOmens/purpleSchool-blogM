@@ -9,6 +9,7 @@
 	--secondary-200: #e5f4ff;
 
 	--accent: #1473e6;
+	--success: rgb(0, 182, 0);
 
 	--fz-s: 12px;
 	--fz-m: 14px;
@@ -22,7 +23,7 @@
 	& .dark {
 		--background: #2c2c2c;
 
-		--primary-400: #e9e8e8;
+		--primary-400: #6e6e6e;
 		--primary-500: #dddada;
 		--primary-600: #ffffff;
 
@@ -48,15 +49,15 @@ body {
 	color: var(--primary-400);
 }
 
-.container {
-	margin: 0 auto;
-	max-width: 1115px;
-}
-
 .grow {
 	flex-grow: 1;
 }
 
 .headerInsurance {
-	padding-top: 100px;
+	padding-top: 200px;
+}
+@media screen and (min-width: 768px) {
+	.headerInsurance {
+		padding-top: 100px;
+	}
 }

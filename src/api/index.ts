@@ -1,5 +1,9 @@
 import { notFound } from 'next/navigation'
 
+import type { FormInputs } from '@/app/(routes)/[id]/components/form/Form.interfaces'
+
+import { API } from './api'
+
 export const updateLike = async (id: number, rating: number) => {
 	fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
 		method: 'PATCH',
@@ -22,4 +26,18 @@ export const getData = async <T>(path: string): Promise<T> => {
 	}
 	const returnedData = await resp.json()
 	return returnedData
+}
+
+export const postComment = async (data: FormInputs): Promise<FormInputs> => {
+	const resp = await fetch(API.posts, {
+		method: 'POST',
+		body: JSON.stringify(data),
+		headers: { 'Content-type': 'application/json; charset=UTF-8' },
+	})
+
+	if (resp.ok) {
+		return { message: `success with code: ${resp.status}` }
+	}
+
+	return { message: 'something go wrong with server' }
 }
